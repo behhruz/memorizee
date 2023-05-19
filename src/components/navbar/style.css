@@ -2,7 +2,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 25px;
+  /* padding: 8px 25px; */
   background: #843edd;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
   border-radius: 19px 19px 0px 0px;
@@ -10,6 +10,9 @@ header {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+.navbar-wrapper {
+  padding: 8px 25px;
 }
 .Link-text {
   text-decoration: none;

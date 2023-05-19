@@ -9,7 +9,7 @@ export const Navbar = () => {
       <header>
         {data.map(({ path, title, id, img }) => {
           return (
-            <div key={id}>
+            <div key={id} className="navbar-wrapper">
               <Outlet />
               <NavLink className='Link-text' to={path}>
                 <div className="wrapper">

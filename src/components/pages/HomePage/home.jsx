@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import SignIn from "../../../firebase/signin";
+// import SignIn from "../../../firebase/signin";
 export const ComponentHome = () => {
   return (
     <div className="HomeWrapper">
@@ -8,7 +8,7 @@ export const ComponentHome = () => {
       <h1>home</h1>
       <h1>home</h1>
       <h1>home</h1>
-      <SignIn />
+      {/* <SignIn /> */}
       <h1>home</h1>
       <h1>home</h1>
       <h1>home</h1>

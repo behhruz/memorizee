@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { auth, provider } from "./config";
 import { signInWithPopup } from "firebase/auth";
-import ComponentHome from "../components/pages/HomePage/home";
 import App from "../App";
 
 export const SignIn = () => {
@@ -15,9 +14,14 @@ export const SignIn = () => {
   useEffect(() => {
     setValue(localStorage.getItem("email"));
   });
+  console.log(value);
   return (
     <div>
-      <button onClick={handleClick}>sign in with google</button>
+      {value ? (
+        <App />
+      ) : (
+        <button onClick={handleClick}>sign in with google</button>
+      )}
     </div>
   );
 };
