@@ -1,0 +1,39 @@
+.wrapperSign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg, #6d3cab, #6d3cab), #6d3cab;
+  gap: 30px;
+}
+.wrapperSign > div > img{
+   width: 100%;
+}
+.ContainerSignIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 7px;
+}
+.ContainerSignIn > input {
+  width: 50%;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #8139dc;
+  box-shadow: inset 0px 5px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  outline: none;
+}
+.ContainerSignIn > button {
+  width: 50%;
+  height: 46px;
+  background: #843edd;
+  box-shadow: inset 0px 5px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+}

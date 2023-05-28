@@ -1,28 +1,42 @@
-import React, { useEffect, useState } from "react";
-import { auth, provider } from "./config";
-import { signInWithPopup } from "firebase/auth";
+import React, { useContext, useEffect, useState } from "react";
 import App from "../App";
+import "./style.css";
+import Mars from "../assets/icons/mars.png";
+import { DataContext } from "../context";
 
 export const SignIn = () => {
-  const [value, setValue] = useState("");
+  const { signUser, setSignUser } = useContext(DataContext);
+  const [user, setUser] = useState("");
+  const handleChange = ({ target: { value } }) => {
+    if (value.length > 5) {
+      setUser(value);
+    }
+  };
   const handleClick = () => {
-    signInWithPopup(auth, provider).then((res) => {
-      setValue(res.user.email);
-      localStorage.setItem("email", res.user.email);
-    });
+    setSignUser(user);
+    localStorage.setItem("username", user);
   };
   useEffect(() => {
-    setValue(localStorage.getItem("email"));
+    setSignUser(localStorage.getItem("username"));
   });
-  console.log(value);
+  console.log(user);
   return (
     <div>
-      {value ? (
+      {signUser ? (
         <App />
       ) : (
-        <button onClick={handleClick}>sign in with google</button>
+        <div className="wrapperSign">
+          <div>
+            <img src={Mars} alt="" />
+          </div>
+          <div className="ContainerSignIn">
+            <input type="text" onChange={handleChange} placeholder="username" />{" "}
+            <button onClick={handleClick}>sign in</button>
+          </div>
+        </div>
       )}
     </div>
   );
 };
+
 export default SignIn;

@@ -1,0 +1,16 @@
+.topWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  background: #843edd;
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 19px 19px;
+  height: 52px;
+}
+.topWrapper > img{
+  width: 10%;
+}

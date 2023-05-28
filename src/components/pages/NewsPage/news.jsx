@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ComponentExam = () => {
+export const NewsPage = () => {
   return <div>
     <h1>Exam</h1>
     <h1>Exam</h1>
@@ -30,4 +30,4 @@ export const ComponentExam = () => {
 
   </div>;
 };
-export default ComponentExam;
+export default NewsPage;

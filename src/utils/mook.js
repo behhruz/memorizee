@@ -1,9 +1,12 @@
 import HomeIcon from "../assets/icons/home.svg";
-import ExamIcon from "../assets/icons/examp.svg";
+import GameIcon from "../assets/icons/game.svg";
 import ProfileIcon from "../assets/icons/profile.svg";
+import NewsIcon from "../assets/icons/news.svg";
+
 import ComponentHome from "../components/pages/HomePage/home";
-import ComponentExam from "../components/pages/ExamPage/exam";
 import ComponentProfile from "../components/pages/ProfilePage/profile";
+import  GamesPage  from "../components/pages/GamePage/game";
+import NewsPage from "../components/pages/NewsPage/news";
 
 let data = [
   {
@@ -16,14 +19,22 @@ let data = [
   },
   {
     id: 2,
-    title: "Exam",
-    path: "/exam",
-    element: <ComponentExam />,
-    img: ExamIcon,
+    title: "Game",
+    path: "/game",
+    element: <GamesPage />,
+    img: GameIcon,
     hidden: false,
   },
   {
     id: 3,
+    title: "News",
+    path: "/news",
+    element: <NewsPage />,
+    img: NewsIcon,
+    hidden: false,
+  },
+  {
+    id: 4,
     title: "Profile",
     path: "/profile",
     element: <ComponentProfile />,
